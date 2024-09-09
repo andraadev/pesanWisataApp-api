@@ -8,6 +8,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 Route::apiResource('/destination', destinationController::class);
-Route::get('/destination', [destinationController::class, 'index']);
-Route::post('/destination/add', [destinationController::class, 'store']);
 Route::get('/destination/{slug}', [destinationController::class, 'show']);

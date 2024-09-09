@@ -30,7 +30,7 @@ class destination extends Model
     protected function image(): Attribute
     {
         return Attribute::make(
-            get: fn ($image) => url('/storage/destinations_image/' . $image),
+            get: fn ($image) => url('/storage/destination_image/' . $image),
         );
     }
 }

@@ -20,7 +20,7 @@ class destinationController extends Controller
     public function index()
     {
         //get all posts
-        $destination = DB::table('destinations')->get();
+        $destination = destination::all();
 
         //return collection of posts as a resource
         return new DestinationResource(true, 'List Data Destination', $destination);
@@ -60,7 +60,7 @@ class destinationController extends Controller
         ]);
 
         //return response
-        return new DestinationResource(true, 'Data Post Berhasil Ditambahkan!', $destination);
+        return new DestinationResource(true, 'Data Destinasi Berhasil Ditambahkan!', $destination);
     }
 
     
@@ -68,12 +68,11 @@ class destinationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $slug)
     {
-        //
-                //find post by ID
-                $destination = destination::where('slug',$id)->first();
-                if (!$destination) {
+                //find destination by slug
+                $destination = destination::where('slug',$slug)->first();
+                if ($destination) {
                     return response()->json([
                         'success'=> false,
                         'message' => 'destinasi tidak ditemukan'
@@ -83,13 +82,6 @@ class destinationController extends Controller
                 return new DestinationResource(true, 'Data Destinasi', $destination);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -112,13 +104,13 @@ class destinationController extends Controller
         $destination = destination::find($id);
 
         //check if image is not empty
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image_url')) {
             //upload image
             $image = $request->file('image_url');
-            $image->storeAs('public/destination_image', $image->hashName());
+            $image->storeAs('public/destinations_image', $image->hashName());
 
             //delete old image
-            Storage::delete('public/destination_image/' .basename($destination->image_url));
+            Storage::delete('public/destinations_image/' .basename($destination->image_url));
 
             //update destination data with new image
             $destination->update([
@@ -151,7 +143,7 @@ class destinationController extends Controller
         $destination = destination::find($id);
 
         //delete image
-        Storage::delete('public/destination_image/'.basename($destination->image_url));
+        Storage::delete('public/destinations_image/'.basename($destination->image_url));
 
         //delete post
         $destination->delete();
