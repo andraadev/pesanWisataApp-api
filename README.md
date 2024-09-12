@@ -13,9 +13,9 @@ Aplikasi <b> pesanWisata</b> adalah aplikasi yang digunakan untuk booking tempat
 - React JS (frontend)
 
 # 4. Lain-lain
-Untuk bagian UI dari aplikasi ini akan dibuat di repository lain.
+Untuk bagian UI dari aplikasi ini akan dibuat di repository lain. <br>
 Link Repositorynya: -
 
 # 5. Preview UI aplikasi
-Preview UI dari aplikasi ini dapat kamu lihat di : [pesan wisata preview](https://pesanwisata-preview.netlify.app/)
+Preview UI dari aplikasi ini dapat kamu lihat di : [pesan wisata preview](https://pesanwisata-preview.netlify.app/) <br>
 Link Repository: [https://github.com/andraadev/pesanwisata](https://github.com/andraadev/pesanwisata).
