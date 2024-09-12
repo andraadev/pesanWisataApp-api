@@ -15,3 +15,7 @@ Aplikasi <b> pesanWisata</b> adalah aplikasi yang digunakan untuk booking tempat
 # 4. Lain-lain
 Untuk bagian UI dari aplikasi ini akan dibuat di repository lain.
 Link Repositorynya: -
+
+# 5. Preview UI aplikasi
+Preview UI dari aplikasi ini dapat kamu lihat di : [pesan wisata preview](https://pesanwisata-preview.netlify.app/)
+Link Repository: [https://github.com/andraadev/pesanwisata](https://github.com/andraadev/pesanwisata).
