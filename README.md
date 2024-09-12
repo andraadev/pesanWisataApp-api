@@ -11,3 +11,7 @@ Aplikasi <b> pesanWisata</b> adalah aplikasi yang digunakan untuk booking tempat
 
 - Laravel (backend)
 - React JS (frontend)
+
+# 4. Lain-lain
+Untuk bagian UI dari aplikasi ini akan dibuat di repository lain.
+Link Repositorynya: -
